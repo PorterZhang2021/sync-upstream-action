@@ -1,7 +1,7 @@
 on:
   schedule:
     - cron: "0 0 * * *" # every day at 00:00
-name: Schedule / sync-upstream of Yikf's forked repositories
+name: Schedule / sync-upstream of PorterZhang2021's forked repositories
 jobs:
   run:
     name: Run
@@ -11,17 +11,10 @@ jobs:
     steps:
     - name: Checkout source code
       uses: actions/checkout@v1
-    - name: Sync spark to fork repo
+    - name: Sync robustmq to fork repo
       uses: ./.
       with:
         token: ${{ secrets.SYNC_UPSTREAM_TOKEN }}
-        owner: Yikf
-        repo: spark
-        branch: master
-    - name: Sync gluten to fork repo
-      uses: ./.
-      with:
-        token: ${{ secrets.SYNC_UPSTREAM_TOKEN }}
-        owner: Yikf
-        repo: incubator-gluten
+        owner: PorterZhang2021
+        repo: robustmq
         branch: main
