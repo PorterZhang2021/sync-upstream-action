@@ -1,7 +1,7 @@
 on:
   push:
   pull_request_target:
-    branches: [master]
+    branches: [dev]
 name: Tests / test-sync-upstream
 jobs:
   run:
@@ -12,10 +12,10 @@ jobs:
     steps:
     - name: Checkout source code
       uses: actions/checkout@v1
-    - name: Sync trino to fork repo
+    - name: Sync robustmq to fork repo
       uses: ./.
       with:
         token: ${{ secrets.SYNC_UPSTREAM_TOKEN }}
-        owner: Yikf
-        repo: trino
+        owner: PorterZhang2021
+        repo: robustmq
         branch: master
