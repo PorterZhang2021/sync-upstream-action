@@ -18,4 +18,4 @@ jobs:
         token: ${{ secrets.SYNC_UPSTREAM_TOKEN }}
         owner: PorterZhang2021
         repo: robustmq
-        branch: master
+        branch: main
