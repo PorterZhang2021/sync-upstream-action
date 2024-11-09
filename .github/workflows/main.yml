@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "0 0 * * *" # every day at 00:00
+    - cron: "0 * * * *" # every hour
 name: Schedule / sync-upstream of PorterZhang2021's forked repositories
 jobs:
   run:
