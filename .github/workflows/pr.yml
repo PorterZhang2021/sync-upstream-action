@@ -19,3 +19,17 @@ jobs:
         owner: PorterZhang2021
         repo: robustmq
         branch: main
+    - name: Sync supercv-backend to fork repo
+      uses: ./.
+      with:
+        token: ${{ secrets.SYNC_UPSTREAM_TOKEN }}
+        owner: PorterZhang2021
+        repo: supercv-backend
+        branch: main
+    - name: Sync supercv-frontend to fork repo
+      uses: ./.
+      with:
+        token: ${{ secrets.SYNC_UPSTREAM_TOKEN }}
+        owner: PorterZhang2021
+        repo: supercv-frontend
+        branch: main
